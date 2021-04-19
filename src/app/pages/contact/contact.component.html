@@ -1,0 +1,27 @@
+<section class="contact">
+  <div *ngIf="!selectedContactId; else contactDetails">
+    <h2>My contacts</h2>
+    <div class="flex space-between contact-ctrls">
+      <a routerLink="edit" class="btn add add-contact"></a>
+      <contact-filter (onSetFilter)="onSetFilter($event)"></contact-filter>
+    </div>
+    <contact-list
+      [contacts]="contacts$ | async"
+      (onSelectContact)="selectedContactId = $event"
+    ></contact-list>
+  </div>
+  <ng-template #contactDetails>
+    <div *ngIf="!isEdit; else contactEdit">
+      <contact-details
+        [contactId]="selectedContactId"
+        (onEdit)="isEdit = true"
+      ></contact-details>
+    </div>
+    <ng-template #contactEdit>
+      <contact-edit
+        [contactId]="selectedContactId"
+      >
+      </contact-edit>
+    </ng-template>
+  </ng-template>
+</section>

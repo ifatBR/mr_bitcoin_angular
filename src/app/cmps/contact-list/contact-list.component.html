@@ -1,0 +1,7 @@
+<section class="contact-list">
+    <contact-preview 
+    *ngFor="let contact of contacts" 
+    trackBy="trackByFn" 
+    [contact]="contact"
+    (click)="onSelectContact(contact._id)"></contact-preview>
+</section>

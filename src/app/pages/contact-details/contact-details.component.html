@@ -1,0 +1,35 @@
+<section class="flex justify-center detail">
+  <button (click)="onBack()" class="btn back"></button>
+  <div class="flex column align-center contact-info">
+    <img
+      [src]="'https://i.pravatar.cc/150?u=' + contact._id"
+      alt="{{ contact.name }}'s photo"
+    />
+    <h3>{{ contact.name }}</h3>
+    <h4>{{ contact.phone }}</h4>
+    <h4>{{ contact.email }}</h4>
+    <div class="btn-container">
+      <a [routerLink]="['/contact/edit', contact._id]" class="btn confirm"
+        >Edit</a
+      >
+      <button (click)="onRemoveContact()" type="button" class="btn warning">
+        Delete
+      </button>
+    </div>
+  </div>
+  <div class="move-container">
+    <form class="flex column move-coins">
+      <label for="amount">Amount:</label>
+      <input type="number" min="0" id="amount" autofocus/>
+      <button class="btn confirm">Move</button>
+    </form>
+    <h4>Moves</h4>
+    <ul class="clean-list">
+      <li><p>To: , Amount: , Date:</p></li>
+    </ul>
+  </div>
+  <div class="paging">
+    <a >Prev</a>
+    <a >Next</a>
+  </div>
+</section>

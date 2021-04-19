@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'lato';
+  letter-spacing: 0.3px;
+}
+
+body {
+  background-color: $clr7;
+  color: $clr6;
+  margin: 0;
+  font-size: rem(14px);
+  line-height: rem(20px);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'lato-bold';
+  margin: 0;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 1.4rem;
+  margin-bottom:0.9rem;
+}
+h4{
+  font-size: 1.1rem;
+  margin-bottom:0.6rem;
+}
+p {
+  margin: 0;
+  font-size: rem(16px);
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+
+
+textarea,
+textarea::placeholder,
+input::placeholder {
+  font-family: lato, sans-serif;
+  font-size: 1rem;
+}
+
+textarea {
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 0 1px rgba(9, 30, 66, 0.25);
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid $clr4;;
+  outline: none;
+  box-shadow: 2px 2px 3px 0px #5e5e5e1f;
+  color: $clr6;
+  width:200px;
+}
+
+label{
+  font-size: 1rem;
+}
+.hide {
+  display: none;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 5px;
+  width: fit-content;
+  padding:5px 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: $clr1;
+  transition:0.2s;
+  text-decoration: none;
+  display:inline-block;
+  &:hover{
+    transform: scale(1.1);
+  }
+  &:active{
+    filter:brightness(110%);
+  }
+  &.confirm {
+    color: $clr10;
+    border:2px solid $clr10;
+    // background-color: $clr9;s
+    color: $clr1;
+    background-color: $clr10;
+  }
+
+  &.warning {
+    color: $clr3;
+  }
+  &.neutral{
+    background-color:$clr9;
+  }
+  &.add{
+    // border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding:0px;
+    color:$clr1;
+    background-color:$clr10;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    &::before{
+      font-family:'fa-solid';
+      content:"\f067";
+    }
+  }
+  &.back{
+    color: $clr9;
+    margin: 20px 20px 0;
+    font-size: 1.5rem;
+    position:absolute;
+    top: 60px;
+
+    left: 10px;
+    &::before{
+      font-family: 'fa-solid';
+      content:"\f3e5";
+    }
+  }
+}
