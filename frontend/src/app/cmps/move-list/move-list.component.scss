@@ -1,0 +1,54 @@
+@import '../../../scss/setup/variables';
+
+.move-list {
+
+    h4 {
+        margin-bottom: 15px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $clr6;
+
+        &:not(:last-of-type) {
+            margin-inline-end: 10px;
+        }
+
+        & span {
+            border-bottom: 1px solid $clr6;
+        }
+    }
+}
+
+.last-moves {
+    color: $clr1;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+        margin-bottom: 15px;
+        margin-inline-end: 30px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    p {
+        color: $clr1;
+        font-size: 0.9rem;
+
+        &:not(:last-of-type) {
+            margin-inline-end: 10px;
+        }
+
+        & span {
+            font-weight: bold;
+        }
+    }
+}

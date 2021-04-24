@@ -1,0 +1,39 @@
+@import '../../../scss/setup/variables';
+.header{
+    padding:20px 25px;
+    background-color: $clr2;
+    position:relative;
+    z-index: 2;
+    .logo{
+        color:$clr3;
+        font-size: 1.7rem;
+        & span{
+            color:$clr1;
+        }
+    }
+    a{
+        font-family:'fa-solid';
+        color:$clr1;
+        text-decoration: none;
+        font-weight:bold;
+        font-size: 1.3rem;
+        &:hover{
+            color:$clr3;
+        }
+    }
+    a:not(:last-of-type){
+        margin-inline-end: 30px;
+    }
+    .active{
+        color:$clr3;
+    }
+    .home::before{
+        content:"\f015"
+    }
+    .contact::before{
+        content:"\f007"
+    }
+    .statistic::before{
+        content:"\f1fe"
+    }
+}

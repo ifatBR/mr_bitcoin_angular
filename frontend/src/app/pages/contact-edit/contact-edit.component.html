@@ -1,0 +1,12 @@
+<section class="edit" *ngIf="contact">
+  <button (click)="onBack()" class="btn back"></button>
+  <form [formGroup]="form" (submit)="onSaveContact()" class="flex column edit-form ">
+    <Label for="name">Name:</Label>
+    <input type="text" id="name" formControlName="name" />
+    <Label for="phone">Phone:</Label>
+    <input type="text" id="phone" formControlName="phone"/>
+    <Label for="email">E-mail:</Label>
+    <input type="text" id="email" formControlName="email" />
+    <button class="btn confirm">Save</button>
+  </form>
+</section>

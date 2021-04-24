@@ -1,0 +1,71 @@
+@import '../../../scss/setup/variables';
+@import '../../../scss/setup/mixins';
+@import '../../../scss/setup/functions';
+.homepage{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    height:100%;
+    width: 100%;
+    background-image: url('../../../assets/img/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-y: center ;
+    background-position-x: center;
+    z-index: 1;
+    .user-info-container{
+        display:flex;
+        flex-direction: column;
+        position:absolute;
+        right:20px;
+        top:100px;
+        min-width: rem(300px);
+        >*{
+            height: fit-content;
+            padding:20px;
+            border:1px solid $clr10;
+            border-radius: 5px;
+            background-color: #3bb6d5b7;
+        }
+        >*:hover{
+            background-color: #4ebfdbe3;
+        }
+    }
+    
+    .user-info
+    {
+        margin-bottom:10px;
+        font-size: 1rem;
+        h2{
+            color: $clr11;
+            margin-bottom:0.9rem;
+        }
+        h3{
+            color: $clr10;
+            margin-bottom:0.5rem;
+        }
+        button{
+            float:right;
+            margin-top: 1.2rem;
+
+        }
+ 
+    }
+    .signup {
+        label{
+            display: inline-block;
+            margin-bottom:10px;
+            color:$clr3;
+            font-weight: bold;
+        }
+        input{
+            width: 100%;
+        }
+    }
+    @include for-mobile-layout{
+        .user-info-container {
+            left:50%;
+            transform: translateX(-50%);
+    }
+}
+}

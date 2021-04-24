@@ -1,0 +1,14 @@
+<section [class]="moveClass">
+  <h4>{{ title }}</h4>
+  <ul
+    *ngFor="let move of moves; index as idx"
+    trackBy="trackByFn(idx)"
+    class="clean-list"
+  >
+    <li class="flex">
+      <p *ngIf="isShowTo"><span>To:</span> {{ move.to }}</p>
+      <p><span>Amount:</span> {{ move.amount }} BTC,</p>
+      <p><span>Date:</span> {{ move.at | date: "d/M/yy" }}</p>
+    </li>
+  </ul>
+</section>

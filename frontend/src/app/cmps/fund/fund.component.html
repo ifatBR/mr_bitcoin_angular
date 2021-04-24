@@ -1,0 +1,5 @@
+<form (submit)="onMoveCoins()" class="flex column fund">
+  <label for="amount">Amount:</label>
+  <input type="number" min="0" id="amount" name="amount" [(ngModel)]="amount"/>
+  <button class="btn confirm">Move</button>
+</form>

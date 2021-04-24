@@ -1,0 +1,19 @@
+.fund {
+     margin-bottom: 10px;
+
+    &>* {
+        margin-bottom: 15px;
+    }
+    h4{
+        font-size:1rem
+    }
+    label{
+        font-weight: bold;
+    }
+    input{
+     width: 100%;   
+    }
+    .btn {
+        align-self: flex-end;
+    }
+}

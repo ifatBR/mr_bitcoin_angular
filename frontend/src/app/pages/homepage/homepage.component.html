@@ -1,0 +1,23 @@
+<section class="homepage">
+  <div class="user-info-container">
+    <div *ngIf="user.name; else signup" class="user-info">
+      <h2>Hello {{ user.name }}</h2>
+      <h3>Coins: {{ user.coins }}</h3>
+      <h3>Rate: {{ rate$ | async }}</h3>
+      <button (click)="onLogout()" class="btn warning">Sign out</button>
+    </div>
+    <ng-template #signup>
+      <form (submit)="onSignup()" class="user-info signup">
+        <label for="signup">Name: </label>
+        <input type="text" id="signup" name="name" [(ngModel)]="userName" />
+        <button class="btn confirm">Signup</button>
+      </form>
+    </ng-template>
+    <move-list
+      [moves]="lastMoves"
+      [title]="'Last moves:'"
+      [isShowTo]="true"
+      [moveClass]="'last-moves'"
+    ></move-list>
+  </div>
+</section>

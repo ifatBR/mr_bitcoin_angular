@@ -1,0 +1,28 @@
+@import '../../../scss/setup/variables';
+@import '../../../scss/setup/mixins';
+
+.chart {
+    margin: 0px auto;
+}
+
+.chart-headline {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 40px;
+    color: $clr10;
+    font-size: 1.5rem;
+}
+
+@include for-mobile-layout {
+    .chart {
+        margin: 20px auto;
+
+    }
+
+    .chart-headline {
+        font-size: 1rem;
+
+    }
+
+}

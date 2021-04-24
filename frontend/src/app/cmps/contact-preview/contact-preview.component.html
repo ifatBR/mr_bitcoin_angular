@@ -1,0 +1,16 @@
+<section class="flex column contact-preview">
+  <div class="img-container">
+    <img
+      class="contact-img"
+      [src]="'https://i.pravatar.cc/150?u=' + contact._id"
+      alt="{{ contact.name }}'s photo"
+      (load)="hideLoader()"
+      [ngStyle]="{visibility:!isLoaded?'hidden':''}"
+    />
+      <img 
+      *ngIf="!isLoaded"
+      class="loader"
+      src="https://i.pinimg.com/originals/19/cc/77/19cc777afcca19dda6f4a13ea889d6b6.gif" alt="">
+  </div>
+  <h2>{{ contact.name }}</h2>
+</section>

@@ -1,0 +1,101 @@
+@import '../../../scss/setup/variables';
+@import '../../../scss/setup/mixins';
+
+.detail {
+    margin-top: 40px;
+    align-items: flex-start;
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-rows: 70vh;
+    gap: 30px;
+
+    >*:not(button) {
+        border-radius: 5px;
+        width: fit-content;
+        height: 100%;
+
+    }
+
+    .contact-container {
+        background-color: $clr2;
+        color: $clr1;
+        padding: 40px 20px;
+        grid-column: 2/3;
+        width: 100%;
+        text-align: center;
+
+        .btn-container {
+            margin-top: 1.9rem;
+        }
+
+        .btn-container>*:not(:last-child) {
+            margin-inline-end: 20px;
+        }
+
+        .contact-info {
+            width: 100%;
+        }
+
+        img {
+            border-radius: 50%;
+            border: 4px solid $clr3;
+            border: 6px solid $clr1;
+            margin-bottom: 2.3rem;
+            width: 50%;
+        }
+    }
+
+    .move-container {
+        color: $clr9;
+        border: 1px solid $clr2;
+        background-color: $clr1;
+        justify-self: flex-start;
+        padding: 40px 40px;
+        min-width: 60%;
+    }
+
+
+
+    .paging {
+        grid-column: 2/3;
+        margin: auto;
+
+        >*:not(:last-child) {
+            margin-inline-end: 20px;
+        }
+
+        >* {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $clr6;
+            font-weight: 400;
+        }
+
+        >*:hover {
+            font-weight: bold;
+        }
+    }
+
+    @include for-mobile-layout {
+        padding: 0 10px;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+
+        .contact-container {
+            margin-bottom: 20px;
+        }
+
+        .move-container {
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        .paging {
+            margin-bottom: 20px;
+        }
+    }
+}
